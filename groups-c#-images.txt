@@ -1,0 +1,31 @@
+namespace shuffimgs
+{
+    public partial class MainPage : ContentPage
+    {
+        string img1_str = "dotnet_bot.png";
+        string img2_str = "i2.png";
+        string img3_str = "i3.png";
+        string img4_str = "i4.png";
+        
+
+        public MainPage()
+        {
+            InitializeComponent();
+        }
+
+        private void clickme_Clicked(object sender, EventArgs e)
+        {
+            img1.Source = img1_str;
+            img2.Source = img2_str;
+            img3.Source = img3_str; 
+            img4.Source = img4_str;
+            string temp;
+            temp = img3_str;
+            img3_str = img4_str;
+            img4_str = img2_str;
+            img2_str = img1_str;
+            img1_str = temp;
+        }
+    }
+
+}
